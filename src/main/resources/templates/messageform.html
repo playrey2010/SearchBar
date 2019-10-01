@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang=en xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>$Title$</title>
+</head>
+<body>
+Message Form
+<form th:action="@{/processMessage}" th:object="${message}" method="post">
+    <input type="hidden" th:field="*{id}">
+    <input type="text" placeholder="Title" th:field="*{title}">
+    <input type="date" th:field="*{date}">
+    <textarea placeholder="description" th:field="*{description}">
+
+    </textarea>
+    <input type="submit" value="Submit">
+
+</form>
+</body>
+</html>
